@@ -1,3 +1,4 @@
+#include"myImplementation.hpp"
 #include"engine.hpp"
 U64 lookedAt = 0ULL;
 U64 mates = 0ULL;
@@ -90,11 +91,11 @@ void position_test() {
     bool passedAllTests = true;
     Position pos{ "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 0" };
     std::array<std::array<unsigned int, 128>, 40> moves{};
-    std::array<int, 6> expected_nodes{ 48,2039,97862 ,4085603,193690690,8031647685 };
-    std::array<int, 6> expected_mates{ 0, 0, 1, 43, 30171, 360003 };
-    std::array<int, 6> expected_captures{ 8, 351, 17102, 757163, 35043416, 1558445089 };
-    std::array<int, 6> expected_castles{ 2, 91, 3162, 128013, 4993637, 184513607 };
-    std::array<int, 6> expected_promotions{ 0, 0, 0, 15172, 8392, 56627920 };
+    std::array<U64, 6> expected_nodes{ 48,2039,97862 ,4085603,193690690,8031647685 };
+    std::array<U64, 6> expected_mates{ 0, 0, 1, 43, 30171, 360003 };
+    std::array<U64, 6> expected_captures{ 8, 351, 17102, 757163, 35043416, 1558445089 };
+    std::array<U64, 6> expected_castles{ 2, 91, 3162, 128013, 4993637, 184513607 };
+    std::array<U64, 6> expected_promotions{ 0, 0, 0, 15172, 8392, 56627920 };
     for (int i = 0; i < 4; i++) {
         reset_test_parameters();
         std::string out = "";
@@ -110,11 +111,11 @@ void position_test() {
         std::cout << out << "\n";
     }
     pos = Position{ "8/2p5/3p4/KP5r/1R3p1k/8/4P1P1/8 w - - 0 0" };
-    expected_nodes = std::array<int, 6>{ 14, 191, 2812, 43238, 674624, 11030083 };
-    expected_mates = std::array<int, 6>{ 0, 0, 0, 17, 0, 2733 };
-    expected_captures = std::array<int, 6>{ 1, 14, 209, 3348, 52051, 940350 };
-    expected_castles = std::array<int, 6>{ 0, 0, 0, 0, 0, 0 };
-    expected_promotions = std::array<int, 6>{ 0, 0, 0, 0, 0, 7552 };
+    expected_nodes = std::array<U64, 6>{ 14, 191, 2812, 43238, 674624, 11030083 };
+    expected_mates = std::array<U64, 6>{ 0, 0, 0, 17, 0, 2733 };
+    expected_captures = std::array<U64, 6>{ 1, 14, 209, 3348, 52051, 940350 };
+    expected_castles = std::array<U64, 6>{ 0, 0, 0, 0, 0, 0 };
+    expected_promotions = std::array<U64, 6>{ 0, 0, 0, 0, 0, 7552 };
     for (int i = 0; i < 6; i++) {
         reset_test_parameters();
         std::string out = "";
@@ -130,11 +131,11 @@ void position_test() {
         std::cout << out << "\n";
     }
     pos = Position{ "r3k2r/Pppp1ppp/1b3nbN/nP6/BBP1P3/q4N2/Pp1P2PP/R2Q1RK1 w kq - 0 1" };
-    expected_nodes = std::array<int, 6>{ 6, 264, 9467, 422333, 15833292, 706045033 };
-    expected_mates = std::array<int, 6>{ 0, 0, 22, 5, 50562, 81076 };
-    expected_captures = std::array<int, 6>{ 0, 87, 1021, 131393, 2046173, 210369132 };
-    expected_castles = std::array<int, 6>{ 0, 6, 0, 7795, 0, 10882006 };
-    expected_promotions = std::array<int, 6>{ 0, 48, 120, 60032, 329464, 81102984 };
+    expected_nodes = std::array<U64, 6>{ 6, 264, 9467, 422333, 15833292, 706045033 };
+    expected_mates = std::array<U64, 6>{ 0, 0, 22, 5, 50562, 81076 };
+    expected_captures = std::array<U64, 6>{ 0, 87, 1021, 131393, 2046173, 210369132 };
+    expected_castles = std::array<U64, 6>{ 0, 6, 0, 7795, 0, 10882006 };
+    expected_promotions = std::array<U64, 6>{ 0, 48, 120, 60032, 329464, 81102984 };
     for (int i = 0; i < 5; i++) {
         reset_test_parameters();
         std::string out = "";
