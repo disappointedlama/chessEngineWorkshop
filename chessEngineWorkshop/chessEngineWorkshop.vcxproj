@@ -133,10 +133,7 @@
   <ItemGroup>
     <ClCompile Include="bitboard.cpp" />
     <ClCompile Include="chessEngineWorkshop.cpp" />
-    <ClCompile Include="engine.cpp" />
     <ClCompile Include="move.cpp" />
-    <ClCompile Include="myImplementation.cpp" />
-    <ClCompile Include="position.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bishopAttacks.hpp" />
@@ -148,6 +145,7 @@
     <ClInclude Include="knightAttacks.hpp" />
     <ClInclude Include="masks.hpp" />
     <ClInclude Include="move.hpp" />
+    <ClInclude Include="myImplementation.hpp" />
     <ClInclude Include="pawnAttacks.hpp" />
     <ClInclude Include="position.hpp" />
     <ClInclude Include="rookAttacks.hpp" />

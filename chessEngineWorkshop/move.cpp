@@ -1,14 +1,4 @@
 #include "move.hpp"
-std::string uci(const int move) {
-	const int from_square = get_from_square(move);
-	const int to_square = get_to_square(move);
-	std::string ret = square_coordinates[from_square] + square_coordinates[to_square];
-	const int promoted_type = get_promotion_type(move);
-	if ((promoted_type != 15)) {
-		ret += ascii_promotion_symbols[promoted_type];
-	}
-	return ret;
-}
 void print_move(int move) {
 	const int piece_type = get_piece_type(move);
 	const int from_square = get_from_square(move);
