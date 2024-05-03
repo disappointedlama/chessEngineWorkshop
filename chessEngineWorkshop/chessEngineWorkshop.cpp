@@ -175,7 +175,7 @@ void position_test() {
 
 int main()
 {
-    position_test();
+    //position_test();
 	Engine e{};
 	e.uci_loop();
 }

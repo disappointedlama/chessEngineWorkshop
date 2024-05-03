@@ -1780,7 +1780,7 @@ public:
 						break;
 					}
 				}
-				printf(" %c", (piece == no_piece) ? ' .' : ascii_pieces[piece]);
+				printf(" %c", (piece == no_piece) ? '.' : ascii_pieces[piece]);
 			}
 			printf("\n");
 		}
@@ -1812,7 +1812,7 @@ public:
 
 				int piece = square_board[square];
 
-				printf(" %c", (piece == no_piece) ? ' .' : ascii_pieces[piece]);
+				printf(" %c", (piece == no_piece) ? '.' : ascii_pieces[piece]);
 			}
 			printf("\n");
 		}
